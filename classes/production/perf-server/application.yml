@@ -1,0 +1,38 @@
+spring:
+  # JPA configuration
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/performance
+    username: devmind
+    password: devmind
+
+  # By default web resources are in /static
+  resources:
+    static-locations:
+        - classpath:/static/
+
+server:
+  ssl:
+    key-store: classpath:perf.jks
+    key-store-password: DevMind
+    key-password: DevMind
+    protocol: TLSv1.2
+
+# TODO We can compress web resources sent to the client
+#server:
+#  compression:
+#    enabled: true
+#    mime-types: application/json,text/css,application/javascript
+#    min-response-size: 2048
+
+---
+spring:
+  profiles: dev
+  resources:
+    static-locations:
+      - file:perf-client/build/dist/
+  devtools:
+    restart:
+      additional-paths:
+        - perf-client/build/dist/
+      additional-exclude: "**/*.js, **/*.css, **/*.html, **/*.svg, **/*.png,, **/*.jpg"

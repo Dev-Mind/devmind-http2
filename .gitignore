@@ -1,0 +1,16 @@
+*.iml
+*.db
+.gradle
+.idea
+.classpath
+.project
+.extract/
+.settings/
+.tmp/
+
+build
+dist
+target
+node_modules
+out
+

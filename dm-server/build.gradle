@@ -1,0 +1,33 @@
+apply plugin: 'spring-boot'
+
+bootRun {
+    addResources = true
+}
+
+jar {
+    baseName = 'web-performance'
+    version = '0.0.1-SNAPSHOT'
+}
+
+springBoot {
+    mainClass = 'com.devmind.WebPerformanceApplication'
+}
+
+dependencies {
+    compile project(':dm-client')
+
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile "org.springframework.boot:spring-boot-starter-undertow"
+    compile "org.mortbay.jetty.alpn:alpn-boot:8.1.9.v20160720"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "org.springframework.boot:spring-boot-devtools"
+    compile "org.springframework.boot:spring-boot-starter-cache"
+
+    runtime("mysql:mysql-connector-java:5.1.36")
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("com.ninja-squad:DbSetup:1.6.0")
+    testCompile("com.h2database:h2")
+}

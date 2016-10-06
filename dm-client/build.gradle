@@ -1,0 +1,30 @@
+plugins {
+    id 'com.moowork.node' version '0.11'
+}
+
+apply plugin: 'com.moowork.node'
+
+node {
+    version = '5.11.1'
+    npmVersion = '3.8.6'
+    download = true
+}
+
+def jsBuildDir = project.buildDir.absolutePath + '/dist'
+
+jar {
+    from jsBuildDir
+    eachFile { details ->
+        details.path = details.path.startsWith('META-INF') ?: 'static/'+details.path
+    }
+    includeEmptyDirs = false
+
+}
+
+task gulp(dependsOn: npmInstall, type: NpmTask) {
+    inputs.file 'gulpfile.babel.js'
+    outputs.dir jsBuildDir
+    args = ['run', 'build']
+}
+
+jar.dependsOn gulp

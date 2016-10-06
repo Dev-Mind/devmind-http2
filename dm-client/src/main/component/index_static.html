@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dev-Mind</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="img/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dev-Mind">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="scripts/vendors/polyfill.min.js"></script>
+    <script src="scripts/vendors/jquery.slim.min.js"></script>
+    <script src="scripts/vendors/bootstrap.min.js"></script>
+    <script src="scripts/vendors/moment-with-locales.min.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar dm_navbar">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">..</span>
+                    <span class="icon-bar">..</span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home" onClick="app.go('home')">
+                    <img src="img/logo/logo_long.svg">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="nav__session"><a href="#session" onClick="app.go('session')">Sessions</a></li>
+                    <li id="nav__speaker"><a href="#speaker" onClick="app.go('speaker')">Speakers</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div id="dmContent">
+            <div class="page-header">
+                <h1>Performance web
+                    <small>Spring Boot</small>
+                </h1>
+            </div>
+            <p>Cette application exemple sert de support à ma présentation sur l'<strong>amélioration des performances
+                d'une
+                webapp Spring Boot </strong>. Le but est de voir les améliorations que vous pouvez faire côté serveur ou
+                côté
+                présentation pour que votre application soit performante. Quand on parle performance nous pouvons
+                dissocier les
+                aspects liés à la sécurité et veux à la rapidité (2 critères utilisés aujourd'hui dans le calcul du page
+                rank
+                Google).</p>
+
+            <p>L'exemple fonctionnel utilisé est la conférence Mix-IT </p>
+
+            <h2>Exemple image logo</h2>
+            <img src="img/logo/logo_1500.png" class="img-responsive">
+
+            <h2>Exemple image responsive</h2>
+            <img src="img/mixit/mixit-amphi_2048.jpg" class="img-responsive">
+
+            <h2>Exemple image de fond</h2>
+            <div class="jumbotron dm_img__inbackground">
+                <p><a class="btn btn-primary btn-lg" href="#" onClick="app.go('session')" role="button">Sessions Mix-IT
+                    2016</a></p>
+                <p>Dans le premier exemple l'image est directement intégrée au document via
+                    une balise. La nous l'utilisons comme fond</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="dmSponsors">
+        <div class="dm_sponsors">
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-zenika.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-soprasteria.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-esker.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-viseo.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-worldline.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-sword.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-stormshield.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-redhat.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-erdf-linky.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-cgi.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-sonarsource.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-econom.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-isr.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-sii.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-craftsmen.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-stackoverflow.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-alfene.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-amaris.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-bootstart.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-breaz.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-onlylyon.jpg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-pivotal.svg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-infoq.png"
+                                                    class="dm_sponsor__img img-responsive"></div>
+            <div class="dm_sponsor__container"><img src="img/sponsors/logo-lyontechhub.svg"
+                                                    class="dm_sponsor__img img-responsive"></div>
+        </div>
+    </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container-fluid">All right reserved - @2016 Guillaume EHRET</div>
+</footer>
+
+
+</body>
+</html>
