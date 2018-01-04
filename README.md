@@ -1,6 +1,6 @@
 # HTTP2
 
-![Dev-Mind](https://www.dev-mind.fr/images/logo/logo_1500.png)
+![Dev-Mind](https://www.dev-mind.fr/img/logo/logo_1500.png)
 
 
 ## DB setup
